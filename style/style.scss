@@ -1,0 +1,254 @@
+@import "settings";
+
+body {
+    background: url('../img/background.png') no-repeat;
+    background-size: cover;
+    font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "Titillium";
+  src: url("../fonts/TitilliumText22L004.otf");
+}
+@font-face {
+  font-family: "Titillium2";
+  src: url("../fonts/TitilliumText22L002.otf");
+}
+
+h1 {
+	@include hidden;
+}
+h2 {
+	color: #fff;
+	font-size: 2rem;
+	margin-bottom: 40px;
+	font-family: 'Titillium';
+}
+img { 
+	opacity: 0.3;
+	max-width: 100%;
+	height: auto;
+}
+header {
+	padding: 35px 30px 0 30px;;
+	margin: 0 auto;	
+	width: 920px;
+	text-align: center;
+}
+.container {
+	padding: 0 30px;
+	display: flex;
+	flex-direction: row;
+	width: 920px;
+	margin: 35px auto;
+	justify-content: space-between;
+}
+.column {
+	text-align: center;
+	width: 400px;
+	margin: 0 auto;
+}
+.form-container {
+	background: rgba(0,0,0, 0.23);
+	border-radius: 3px;
+	padding: 20px;
+	margin-bottom: 50px;
+}
+form {
+	border-radius: 3px;
+	background-color: #f4f4f4;
+	text-align: left;
+	padding: 10px;
+}
+.form-row {
+	padding: 10px;
+}
+
+
+input,
+select, 
+textarea {
+	@include fields;
+	color: #afafaf;
+	border: 1px solid #c6c6c6;
+}
+.btn-green {
+	background-image: linear-gradient(to bottom, #a3d740 0%, #7EC31F 100%);
+	border-color: #3b9a00;
+	color: #fff;
+	font-size: 1.2rem;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	font-family: 'Titillium';
+}
+.btn-red {
+	background-image: linear-gradient(to bottom, #f76f7f 0%, #F03747 100%);
+	color: #fff;
+	font-size: 1.2rem;
+	border-color: #a72c36;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	font-family: 'Titillium';
+}
+.btn-disabled {
+	background-image: linear-gradient(to bottom, #a3d740 0%, #7EC31F 100%);
+	border-color: #3b9a00;
+	color: #fff;
+	font-size: 1.2rem;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	opacity: 0.3;
+	font-family: 'Titillium';
+}
+input[type="submit"].btn-green:hover {
+	background-image: linear-gradient(to bottom, #87b335 0%, #619418 100%);
+}
+input[type="submit"].btn-red:hover {
+	background-image: linear-gradient(to bottom, #d1505e 0%, #c32e3a 100%);
+}
+.btn-row {
+	display: flex;
+	justify-content: space-between;
+
+	input {
+		width: 45%;
+	}
+	label {
+		margin-top: 10px;
+	}
+}
+
+textarea {
+	resize: none;
+	height: 230px;
+	background-color: #f2f2f2;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+	background-image: linear-gradient(to bottom, #F6F6F6 0%, #f1f1f1 100%);
+	background-color: #f2f2f2;
+	padding-left: 60px;
+}
+
+
+.label-checkbox {
+	color: #afafaf;
+	font-size: 1.1rem;
+}
+label:not(.label-checkbox) {
+	@include hidden;
+}
+.label-checkbox span {
+	margin-left: 35px;
+	line-height: 25px;
+}
+input[type="checkbox"] {
+	position: absolute;
+	width: 0;
+	height: 0;
+	z-index: -10;
+}
+input[type="checkbox"] + label {
+	display: inline-block;
+	position: relative;
+}
+input[type="checkbox"] + label:before {
+	content: '';
+	width: 25px;
+	height: 25px;
+	border-radius: 4px;
+	border: 1px solid #c6c6c6;
+	position: absolute;
+	left: 0;
+}
+input[type="checkbox"]:checked + label:after {
+	content: '';
+	width: 25px;
+	height: 25px;
+	border-radius: 4px;
+	border: 1px solid #c6c6c6;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-right: 14px;
+}
+input[type="checkbox"]:checked + label:before {
+	background: #a7da47;
+	width: 16px;
+	height: 16px;
+	border-radius: 4px;
+	margin: 5px;
+	border: none;
+}
+
+
+.form-select {
+	position: relative;
+}
+.form-select img {
+	display: block;
+	position: absolute;
+	opacity: 1;
+	top: 20px;
+	left: 35px;
+	border-right: 1px solid #e4e4e4;
+	padding-right: 20px;
+}
+select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url('../img/arrow.png');
+	background-repeat: no-repeat;
+    background-position: 95%;
+    padding-left: 80px;
+}
+::placeholder {
+	color: #afafaf;
+	border-left: 1px solid #e4e4e4;
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+ input[name="username"],
+ input[name="name"] {
+	background: url('../img/username.png') no-repeat 20px 50%;
+}
+ input[name="email"] {
+	background: url('../img/email.png') no-repeat 20px 50%;
+}
+ input[name="password"],
+ input[name="confirm-password"] {
+	background: url('../img/password.png') no-repeat 20px 50%;
+}
+ input[name="phone-number"] {
+	background: url('../img/phone.png') no-repeat 20px 50%;
+}
+
+@media only screen and(max-width: 480px) {
+	input,
+	select {
+		font-size: 0.8rem;
+	}
+	::placeholder {
+		padding-left: 6px;
+	}
+	span {
+		font-size: 0.9rem;
+	}
+	.btn-green,
+	.btn-red,
+	.btn-disabled {
+		font-size: 1rem;
+	}
+}
+@media only screen and(max-width: 768px) {
+		.container {
+			flex-direction: column;
+		}
+	}
+
+
+input[type="checkbox"]:focus + label:before
+{
+	  border: 1px solid #5E9ED6;
+}

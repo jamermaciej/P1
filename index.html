@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt 1</title>
+     <meta name="viewport" content="width=device-width">
+    <!-- build:css -->
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet"> -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header>
+      <h1>masteralb creative</h1>
+      <img src="img/logo_top.png" alt="masteralb">
+    </header>
+    <div class="container">
+      <div class="column">
+        <h2>Register Form</h2>
+        <div class="form-container">
+        <form method="post" action="">
+          <div class="form-row">
+            <label for="field-username">Username</label>
+            <input type="text" id="field-username" name="username" placeholder="Username" required>
+          </div>
+          <div class="form-row">
+            <label for="field-password">Password</label>
+            <input type="password" id="field-password" name="password" placeholder="Password" required>
+          </div>
+          <div class="form-row">
+            <label for="field-confirm-password">Confirm Password</label>
+            <input type="password" id="field-confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+          </div>
+          <div class="form-row">
+            <label for="field-email">Email</label>
+            <input type="email" id="field-email" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-row form-select">
+            <label for="field-email">Your location</label>
+            <select id="field-email" name="location">
+              <option value="" disabled selected hidden>Your Location</option>
+              <option value="poland">Poland</option>
+              <option value="germany">Germany</option>
+            </select>
+            <img src="img/location.png" alt="">
+          </div>
+          <div class="form-row">
+              <input type="checkbox" id="field-regulation" name="regulation" required>
+              <label class="label-checkbox" for="field-regulation">
+                <span>I have read and accept the terms of use.</span>
+              </label>
+          </div>
+          <div class="form-row">
+            <input type="submit" class="btn-green" value="Sign Up">
+          </div>
+        </form>
+        </div>
+        <h2>Send Email</h2>
+        <div class="form-container">
+        <form method="post" action="">
+          <div class="form-row">
+            <label for="field-name">Your name</label>
+            <input type="text" id="field-name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-row">
+            <label for="field-email-send">Your Email</label>
+            <input type="email" id="field-email-send" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-row">
+            <label for="field-message">Type your message...</label>
+            <textarea name="message" id="field-message" required>Type your message...</textarea>
+          </div>
+          <div class="form-row">
+              <input type="checkbox" id="field-copy" name="send-copy">
+            <label for="field-copy" class="label-checkbox">
+              <span>Send a copy to my Email</span>
+            </label>
+          </div>
+          <div class="form-row">
+            <input type="submit" class="btn-green" value="Send Email">
+          </div>
+        </form>
+        </div>
+      </div>
+      <div class="column">
+      <h2>Sign In Form</h2>
+      <div class="form-container">
+        <form method="post" action="">
+          <div class="form-row">
+            <label for="field-username-sign-in">Username</label>
+            <input type="text" id="field-username-sign-in" name="username" placeholder="Username" required>
+          </div>
+          <div class="form-row">
+            <label for="field-password-sign-in">Password</label>
+            <input type="password" id="field-password-sign-in" name="password" placeholder="Password" required>
+          </div>
+          <div class="form-row btn-row">
+              <input id="field-sign" type="checkbox" name="send-copy">
+              <label class="label-checkbox" for="field-sign">
+              <span>Remember me</span>
+            </label>
+            <input type="submit" class="btn-green" value="Sign In">
+          </div>
+        </form>
+        </div>
+      <h2>Recover Form</h2>
+      <div class="form-container">
+        <form method="post" action="">
+          <div class="form-row">
+            <label for="field-recover-email">Enter your Email</label>
+            <input type="email" id="field-recover-email" name="email" placeholder="Enter your Email" required>
+          </div>
+          <div class="form-row">
+            <label for="field-phone-number">Password</label>
+            <input type="text" id="field-phone-number" name="phone-number" placeholder="Enter your Phone number" required>
+          </div>
+          <div class="form-row btn-row">
+            <input type="submit" class="btn-green" value="Send">
+            <input type="submit" class="btn-disabled" disabled value="Done">
+          </div>
+        </form>
+        </div>
+      <h2>Subscribe Form</h2>
+      <div class="form-container">
+        <form method="post" action="">
+          <div class="form-row">
+            <label for="field-subscribe-email">Enter your Email</label>
+            <input type="email" id="field-subscribe-email" name="email" placeholder="Enter your Email" required>
+          </div>
+          <div class="form-row btn-row">
+            <input type="submit" class="btn-green" value="Subscribe">
+            <input type="submit" class="btn-red" value="No, Thanks">
+          </div>
+        </form>
+        </div>
+        <img src="img/logo_bottom.png" alt="masteralb">
+      </div>
+    </div>
+
+  </body>
+</html>
